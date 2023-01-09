@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  font-size: 18px;
+  height: 100%;
+  line-height: 2.2;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  // justify-content: center;
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 15px;
+}
+
+.box {
+  margin: 0 15px;
+  position: relative;
+}
+
+//-------------CLOCK STYLES----------------//
+
+.clock__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0px 0px 40px 0px rgba(34, 60, 80, 0.3);
+  border-radius: 50%;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    background-color: #d3d3d3;
+    border-radius: 50%;
+    z-index: 1000;
+  }
+
+  &.no-dot {
+    &::before {
+      content: none;
+    }
+  }
+}
+
+.no-shadow {
+  box-shadow: none;
+}
+
+.hr,
+.mn,
+.sc {
+  display: flex;
+  position: absolute;
+  bottom: 50%;
+  transform-origin: bottom;
+  transform: rotate(0deg);
+  z-index: 500;
+}
+
+.hr {
+  width: 6px;
+  height: 60px;
+  background-color: #d3d3d3;
+  border-radius: 6px 6px 0 0;
+}
+
+.mn {
+  width: 4px;
+  height: 100px;
+  background-color: #d3d3d3;
+  border-radius: 6px 6px 0 0;
+}
+
+.sc {
+  width: 2px;
+  height: 120px;
+  background-color: red;
+  border-radius: 6px 6px 0 0;
+}
+
+
+//----------NUMBER STYLES------------//
+
+.clock-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(70, 69, 69);
+
+  font-size: 16px;
+  width: 50px;
+  height: 50px;
+  
+  background-color: #d3d3d3;
+  border-radius: 50%;
+  font-weight: 500;
+  position: absolute;
+  z-index: 10;
+}
+
+//----------BUTTON------------//
+
+.time {
+  font-size: 14px;
+  position: absolute;
+  top: -50px;
+  left: 0;
+}
+
+.time-svg1, .time-svg2 {
+  top: -45px;
+}
+
+.btn {
+  width: 65px;
+  height: 35px;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform .3s linear;
+  
+  
+  &:hover {
+    background-color: darken(#f0f0f0, 10);
+  }
+
+  &:active {
+    background-color: darken(#f0f0f0, 20);
+  }
+}
+
+//-------------CLOCK SVG----------------//
+
+.clock__body-svg {
+  overflow: visible;
+}
+
+.clock__body-svg .hour,
+.clock__body-svg .minute,
+.clock__body-svg .second {
+  position: absolute;
+  z-index: 20;
+}
+
+.clock__body-svg .hr,
+.clock__body-svg .mn,
+.clock__body-svg .sc {
+  display: flex;
+  position: absolute;
+  bottom: 50%;
+  transform-origin: center;
+  transform: rotate(0deg);
+}
+
+.clock__body-svg .hr {
+  width: 6px;
+  background-color: #d3d3d3;
+  border-radius: 6px 6px 0 0;
+}
+
+.clock__body-svg .mn {
+  width: 4px;
+  background-color: #d3d3d3;
+  border-radius: 6px 6px 0 0;
+}
+
+.clock__body-svg .sc {
+  width: 2px;
+  background-color: red;
+  border-radius: 6px 6px 0 0;
+}
+
+
+//----------NUMBER STYLES------------//
+
+.clock__body-svg .clock-text {
+  font-weight: 500;
+  text-anchor: middle;
+  alignment-baseline: middle;
+}

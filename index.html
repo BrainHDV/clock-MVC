@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>CLOCK_MVC</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="clock__body" id="clock-DOM1">
+          <div class="time">
+            <button class="btn btn--stop" type="button">стоп</button>
+            <button class="btn btn--start" type="button">старт</button>
+            Нью-Йорк (GMT-5)
+          </div>
+          <div class="hr"></div>
+          <div class="mn"></div>
+          <div class="sc"></div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="clock__body" id="clock-DOM2">
+          <div class="time">
+            <button class="btn btn--stop" type="button">стоп</button>
+            <button class="btn btn--start" type="button">старт</button>
+            Минск (GMT+3)
+          </div>
+          <div class="hr"></div>
+          <div class="mn"></div>
+          <div class="sc"></div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="time time-svg1">
+          <button class="btn btn--stop" type="button">стоп</button>
+          <button class="btn btn--start" type="button">старт</button>
+          Берлин (GMT+1)
+        </div>
+        <svg class="clock__body-svg" id="clock-SVG1">
+          <line stroke-linecap="round" stroke="#d3d3d3" class="hr" />
+          <line stroke-linecap="round" stroke="#d3d3d3" class="mn" />
+          <line stroke-linecap="round" stroke="red" class="sc" />
+          <circle r="5" fill="#d3d3d3" cx="50%" cy="50%" />
+        </svg>
+      </div>
+
+      <div class="box">
+        <div class="time time-svg2">
+          <button class="btn btn--stop" type="button">стоп</button>
+          <button class="btn btn--start" type="button">старт</button>
+          Токио (GMT+9)
+        </div>
+        <svg class="clock__body-svg" id="clock-SVG2">
+          <line stroke-linecap="round" stroke="#d3d3d3" class="hr" />
+          <line stroke-linecap="round" stroke="#d3d3d3" class="mn" />
+          <line stroke-linecap="round" stroke="red" class="sc" />
+          <circle r="5" fill="#d3d3d3" cx="50%" cy="50%" />
+        </svg>
+      </div>
+
+      <div class="box">
+        <div class="clock__body no-shadow no-dot" id="clock-CANV1">
+          <div class="time">
+            <button class="btn btn--stop" type="button">стоп</button>
+            <button class="btn btn--start" type="button">старт</button>
+            Лондон (GMT)
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="clock__body no-shadow no-dot" id="clock-CANV2">
+          <div class="time">
+            <button class="btn btn--stop" type="button">стоп</button>
+            <button class="btn btn--start" type="button">старт</button>
+            Владивосток (GMT+10)
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./modules/Clock.js"></script>
+    <script src="./modules/ClockViewCanvas.js"></script>
+    <script src="./modules/ClockViewDOM.js"></script>
+    <script src="./modules/ClockViewSVG.js"></script>
+    <script src="./modules/ClockControllerButtons.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
